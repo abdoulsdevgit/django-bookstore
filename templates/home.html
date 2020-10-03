@@ -1,8 +1,12 @@
 {% extends '_base.html' %}
+
+{% load static %}
+
 {% block title %} Home {% endblock title %}
 
 {% block content %}
     <h1>Homepage</h1> 
+    <img src="{% static 'images/elephants.jpg'%}" alt="elephants" class="bookcover">
     {% if user.is_authenticated %}
         <h4>Hi {{user.email }}</h4>
         <a href="{% url 'logout' %}">Logout</a>
