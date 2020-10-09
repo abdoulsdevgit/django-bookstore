@@ -9,10 +9,10 @@
     <img src="{% static 'images/elephants.jpg'%}" alt="elephants" class="bookcover">
     {% if user.is_authenticated %}
         <h4>Hi {{user.email }}</h4>
-        <a href="{% url 'logout' %}">Logout</a>
+        <a href="{% url 'account_logout' %}">Logout</a>
     {% else %}
         <p>You are not logged in </p>
-        <a href="{% url 'login' %}"> Login</a>
-        <a href="{% url 'signup' %}">Sign Up</a>
+        <a href="{% url 'account_login' %}"> Login</a>
+        <a href="{% url 'account_signup' %}">Sign Up</a>
     {% endif %}
 {% endblock content %}
